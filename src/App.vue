@@ -36,7 +36,7 @@
               @change="upload"
               :disabled="isSetup"
               ref="upload"
-            >选择文件</file>
+            >Participantes</file>
           </label>
           <span class="separator" v-if="mode === 'both'">- or -</span>
           <label v-if="mode !== 'import'">
@@ -48,10 +48,10 @@
               v-model.number="total"
               :disabled="isSetup"
               ref="total"
-              placeholder="一共有几人？"
+              placeholder="Numeros"
             >
           </label>
-          <button v-if="mode !== 'import'" :disabled="isSetup">确定</button>
+          <button v-if="mode !== 'import'" :disabled="isSetup">Sortear</button>
         </form>
         <form
           id="roll"
@@ -68,7 +68,7 @@
               :max="remaining || 50"
               @input="checkRemaining"
               ref="round"
-              placeholder="本轮抽几人？"
+              placeholder="Nro ganadores?"
             >
           </label>
           /
@@ -78,7 +78,7 @@
             name="begin"
             ref="begin"
           >
-            {{rolling ? '停止' : '开始'}}
+            {{rolling ? 'Parar' : 'Comenzar'}}
             <span
               v-if="coolingDown"
               class="cooler"
@@ -90,7 +90,7 @@
             type="reset"
             :disabled="!isSetup || coolingDown"
           >
-            重置
+            Atras
             <span
               v-if="coolingDown"
               class="cooler"
@@ -98,7 +98,7 @@
             >
             </span>
           </button>
-          <button type="button" @click="openLog">记录</button>
+          <button type="button" @click="openLog">Creditos</button>
         </form>
       </div>
     </div>

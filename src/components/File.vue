@@ -1,6 +1,6 @@
 <template>
   <div class="file">
-    <button type="button" @click="choose"><slot>选择文件</slot></button>
+    <button type="button" @click="choose"><slot>Participantes</slot></button>
     <input type="file" ref="file"
       :name="name"
       :disabled="disabled"
